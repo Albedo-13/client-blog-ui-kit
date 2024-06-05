@@ -1,63 +1,37 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "airbnb"
-  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "simple-import-sort"
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "plugins": ["react", "@typescript-eslint", "simple-import-sort"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:storybook/recommended"
   ],
   "rules": {
+    "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
-    "import/no-unresolved": "off",
-    "import/extensions": "off",
-    "import/no-extraneous-dependencies": "off",
-    "no-unused-expressions": "off",
-    "no-unused-vars": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
-    "react/no-unused-prop-types": "off",
-    "import/prefer-default-export": ["off", { "target": "any" }],
-    "simple-import-sort/imports": [
-      "error",
-      {
-        "groups": [
-          ["^react", "^@?\\w"],
-          ["^(@|components)(/.*|$)"],
-          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
-          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
-          ["^\\u0000"],
-          ["^.+\\.?(scss)$"]
-        ]
-      }
-    ],
+    "react/jsx-uses-react": "error",
+    "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
-    "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
-    "import/no-import-module-exports": "off",
-    "jsx-a11y/click-events-have-key-events": "off",
-    "jsx-a11y/no-static-element-interactions": "off",
-    "camelcase": "off",
-    "react/jsx-props-no-spreading": "off",
-    "react/destructuring-assignment": "off",
-    "react/button-has-type": "off",
-    "no-alert": "off",
-    "no-plusplus":"off",
-    "no-use-before-define": "off",
-    "class-methods-use-this": "off",
-    "consistent-return": "off",
-    "no-shadow": "off",
-    "no-undef": "off"
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react/no-unescaped-entities": 0
   },
-  "ignorePatterns": ["node_modules/", "dist/", "src/stories", "storybook-static"]
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }

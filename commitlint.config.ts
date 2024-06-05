@@ -1,3 +1,3 @@
-const extendsCommitLint = ['@commitlint/config-conventional'];
+const extendsCommitLint = ["@commitlint/config-conventional"]
 
-export default extendsCommitLint;
+export default extendsCommitLint

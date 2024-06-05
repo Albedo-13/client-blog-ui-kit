@@ -7,14 +7,14 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution":"node",
+    "moduleResolution": "node",
     "baseUrl": "./",
+    "declaration": true,
+    "declarationDir": "dist",
     "paths": {
       "@/*": ["src/*"]
     },
     "types": ["@storybook/react", "@svgr/webpack", "jest"]
   },
-  "exclude": [
-    "node_modules",
-  ], 
+  "exclude": ["node_modules"]
 }

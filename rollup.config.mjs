@@ -1,12 +1,12 @@
 import alias from "@rollup/plugin-alias"
 import commonjs from "@rollup/plugin-commonjs"
 import resolve from "@rollup/plugin-node-resolve"
-import replace from "@rollup/plugin-replace" // Добавленный плагин
+import replace from "@rollup/plugin-replace"
 import typescript from "@rollup/plugin-typescript"
 import url from "@rollup/plugin-url"
 import svgr from "@svgr/rollup"
 import path from "path"
-import babel from "rollup-plugin-babel" // Добавленный плагин
+import babel from "rollup-plugin-babel"
 import del from "rollup-plugin-delete"
 import dotenv from "rollup-plugin-dotenv"
 import postcss from "rollup-plugin-postcss"
@@ -50,7 +50,12 @@ export default {
     }),
     babel({
       extensions: [".js", ".jsx", ".ts", ".tsx"],
-      exclude: "node_modules/**"
+      exclude: "node_modules/**",
+      presets: [
+        "@babel/preset-env",
+        "@babel/preset-typescript",
+        "@babel/preset-react"
+      ]
     }),
     typescript(),
     commonjs(),
