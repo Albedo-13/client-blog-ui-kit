@@ -1,6 +1,6 @@
 {
   "name": "@albedo13/client-blog-ui-kit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "UI-kit",
   "main": "dist/bundle.js",
   "types": "dist/src/index.d.ts",

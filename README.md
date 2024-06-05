@@ -4,7 +4,7 @@
 
 `@albedo13/client-blog-ui-kit` - это библиотека UI-компонентов для веб-приложения Modsen-client-blog. Она предоставляет готовые компоненты, которые можно использовать для построения пользовательских интерфейсов приложения.
 
-Посмотреть компоненты в Chromatic - https://665650138328b7a270bfb6b8-edcvjbhoua.chromatic.com/.
+Посмотреть компоненты в Chromatic - https://www.chromatic.com/library?appId=6660994fdf8877deb4374b34
 
 ## Установка
 
