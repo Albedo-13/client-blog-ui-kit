@@ -1,0 +1,32 @@
+@import "../../styles/variables.scss";
+
+.button {
+  cursor: pointer;
+  border: none;
+  font-family: $second-family;
+  font-weight: $fw700;
+  font-size: $fs18;
+  padding: $s16 $s48;
+  min-height: $s56;
+  color: $denim;
+
+  &:hover {
+    border-radius: $s8;
+  }
+
+  &[data-variant="primary"] {
+    background-color: $yellow;
+
+    &:hover {
+      background-color: $yellow-hover;
+    }
+  }
+
+  &[data-variant="secondary"] {
+    background-color: $white;
+
+    &:hover {
+      background-color: $ghost-white;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import "../../styles/variables.scss";
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: $s16;
+  padding: $s24;
+  border: 1px solid rgba($gray, $op3);
+  cursor: pointer;
+
+  &:hover {
+    background-color: $antique-white;
+  }
+
+  &:has(.input:checked) {
+    background-color: $yellow;
+  }
+}
+
+.input {
+  display: none;
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $s48;
+  height: $s48;
+  border-radius: $s8;
+  background-color: $antique-white;
+}
+
+.image {
+}
+
+.text {
+  font-family: $second-family;
+  font-weight: $fw700;
+  font-size: $fs28;
+  color: $denim;
+}

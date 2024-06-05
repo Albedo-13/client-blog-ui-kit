@@ -1,0 +1,28 @@
+@import "../../styles/variables.scss";
+
+.checkbox {
+  padding: $s16 $s20;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  font-family: $second-family;
+  font-weight: $fw700;
+  font-size: $fs14;
+  color: $gray;
+  border: 2px solid rgba($gray, $op7);
+  border-radius: $s28;
+  cursor: pointer;
+
+  &:has(.input:checked) {
+    background-color: $yellow;
+  }
+}
+
+.input {
+  display: none;
+}
+
+.text {
+  opacity: $op7;
+  color: $denim;
+}
